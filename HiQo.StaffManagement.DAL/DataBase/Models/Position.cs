@@ -9,9 +9,6 @@ namespace HiQo.StaffManagement.DAL.DataBase.Models
         public int PositionId { get; set; }
         public string Name { get; set; }
 
-        public int PositionLevelId { get; set; }
-        public PositionLevel PositionLevel { get; set; }
-
         public int CategoryId { get; set; }
         public Category Category { get; set; }
 

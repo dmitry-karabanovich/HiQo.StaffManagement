@@ -9,11 +9,11 @@ namespace HiQo.StaffManagement.DAL.DataBase.Models
         public string Name { get; set; }
         public int? Level { get; set; }
 
-        public virtual ICollection<Position> Positions { get; set; }
+        public virtual ICollection<User> Users { get; set; }
 
         public PositionLevel()
         {
-            Positions = new List<Position>();
+            Users = new List<User>();
         }
     }
 }

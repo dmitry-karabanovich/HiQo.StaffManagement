@@ -10,6 +10,7 @@ namespace HiQo.StaffManagement.DAL.Configuration
             Property(g => g.Name).IsRequired().HasMaxLength(30);
             this.HasMany(r => r.CategoriesPositions).WithRequired(u => u.Category).HasForeignKey(u => u.CategoryId);
             this.HasRequired(g => g.Department).WithMany(r => r.DepartmentsCategories).HasForeignKey(g => g.DepartmentId);
+            this.HasMany(r => r.Users).WithRequired(u => u.Category).HasForeignKey(u => u.CategoryId);
         }
     }
 }

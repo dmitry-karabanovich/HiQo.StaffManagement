@@ -15,6 +15,15 @@ namespace HiQo.StaffManagement.DAL.DataBase.Models
 
         public int PositionId { get; set; }
         public Position Position { get; set; }
-        
+
+        public int PositionLevelId { get; set; }
+        public PositionLevel PositionLevel { get; set; }
+
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
+
+        public int DepartmentId { get; set; }
+        public Department Department { get; set; }
+
     }
 }

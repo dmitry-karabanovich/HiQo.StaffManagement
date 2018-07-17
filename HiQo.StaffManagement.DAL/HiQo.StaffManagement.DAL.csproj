@@ -77,6 +77,14 @@
     <Compile Include="Migrations\201807171153229_Change_Configuration.Designer.cs">
       <DependentUpon>201807171153229_Change_Configuration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807171249344_Change_Connectings_in_DataBase.cs" />
+    <Compile Include="Migrations\201807171249344_Change_Connectings_in_DataBase.Designer.cs">
+      <DependentUpon>201807171249344_Change_Connectings_in_DataBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807171312571_RemovePositionLevelConnection.cs" />
+    <Compile Include="Migrations\201807171312571_RemovePositionLevelConnection.Designer.cs">
+      <DependentUpon>201807171312571_RemovePositionLevelConnection.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -112,6 +120,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807171153229_Change_Configuration.resx">
       <DependentUpon>201807171153229_Change_Configuration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807171249344_Change_Connectings_in_DataBase.resx">
+      <DependentUpon>201807171249344_Change_Connectings_in_DataBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807171312571_RemovePositionLevelConnection.resx">
+      <DependentUpon>201807171312571_RemovePositionLevelConnection.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
