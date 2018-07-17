@@ -5,6 +5,14 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiQo.StaffManagement.WEB", "HiQo.StaffManagement.WEB\HiQo.StaffManagement.WEB.csproj", "{0470ADC0-FEFC-4960-9CC4-34161033F5D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiQo.StaffManagement.Configuration", "HiQo.StaffManagement.Configuration\HiQo.StaffManagement.Configuration.csproj", "{67B054C3-7AC7-4578-9504-FCAD6D8D5802}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiQo.StaffManagement.DAL", "HiQo.StaffManagement.DAL\HiQo.StaffManagement.DAL.csproj", "{1CF4F463-1AB8-4E69-BB99-8833CA55FB05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiQo.StaffManagement.Domain", "HiQo.StaffManagement.Domain\HiQo.StaffManagement.Domain.csproj", "{5C6F1BDC-8C89-412A-BA52-550FBEF21FD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiQo.StaffManagement.Core", "HiQo.StaffManagement.Core\HiQo.StaffManagement.Core.csproj", "{B4A16FF0-E1A7-4D52-B0B7-A776B9FCA162}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,22 @@ Global
 		{0470ADC0-FEFC-4960-9CC4-34161033F5D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0470ADC0-FEFC-4960-9CC4-34161033F5D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0470ADC0-FEFC-4960-9CC4-34161033F5D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67B054C3-7AC7-4578-9504-FCAD6D8D5802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67B054C3-7AC7-4578-9504-FCAD6D8D5802}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67B054C3-7AC7-4578-9504-FCAD6D8D5802}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67B054C3-7AC7-4578-9504-FCAD6D8D5802}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CF4F463-1AB8-4E69-BB99-8833CA55FB05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CF4F463-1AB8-4E69-BB99-8833CA55FB05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CF4F463-1AB8-4E69-BB99-8833CA55FB05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CF4F463-1AB8-4E69-BB99-8833CA55FB05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C6F1BDC-8C89-412A-BA52-550FBEF21FD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C6F1BDC-8C89-412A-BA52-550FBEF21FD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C6F1BDC-8C89-412A-BA52-550FBEF21FD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C6F1BDC-8C89-412A-BA52-550FBEF21FD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4A16FF0-E1A7-4D52-B0B7-A776B9FCA162}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4A16FF0-E1A7-4D52-B0B7-A776B9FCA162}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4A16FF0-E1A7-4D52-B0B7-A776B9FCA162}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4A16FF0-E1A7-4D52-B0B7-A776B9FCA162}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

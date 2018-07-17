@@ -232,7 +232,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -282,6 +284,16 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HiQo.StaffManagement.Configuration\HiQo.StaffManagement.Configuration.csproj">
+      <Project>{67b054c3-7ac7-4578-9504-fcad6d8d5802}</Project>
+      <Name>HiQo.StaffManagement.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HiQo.StaffManagement.Core\HiQo.StaffManagement.Core.csproj">
+      <Project>{b4a16ff0-e1a7-4d52-b0b7-a776b9fca162}</Project>
+      <Name>HiQo.StaffManagement.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

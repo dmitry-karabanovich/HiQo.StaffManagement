@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1CF4F463-1AB8-4E69-BB99-8833CA55FB05}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HiQo.StaffManagement.DAL</RootNamespace>
+    <AssemblyName>HiQo.StaffManagement.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Configuration\CategoryConfiguration.cs" />
+    <Compile Include="Configuration\DepartmentConfiguration.cs" />
+    <Compile Include="Configuration\PositionConfiguration.cs" />
+    <Compile Include="Configuration\PositionLevelConfiguration.cs" />
+    <Compile Include="Configuration\RoleConfiguration.cs" />
+    <Compile Include="Configuration\UserConfiguration.cs" />
+    <Compile Include="DataBase\CompanyContext.cs" />
+    <Compile Include="DataBase\Models\Category.cs" />
+    <Compile Include="DataBase\Models\Department.cs" />
+    <Compile Include="DataBase\Models\Position.cs" />
+    <Compile Include="DataBase\Models\PositionLevel.cs" />
+    <Compile Include="DataBase\Models\Role.cs" />
+    <Compile Include="DataBase\Models\User.cs" />
+    <Compile Include="Migrations\201807170932228_CompanyDB-v1.cs" />
+    <Compile Include="Migrations\201807170932228_CompanyDB-v1.Designer.cs">
+      <DependentUpon>201807170932228_CompanyDB-v1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807170942076_Romove-connextion_between_User_and_Category.cs" />
+    <Compile Include="Migrations\201807170942076_Romove-connextion_between_User_and_Category.Designer.cs">
+      <DependentUpon>201807170942076_Romove-connextion_between_User_and_Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807171052064_Create_Configuration.cs" />
+    <Compile Include="Migrations\201807171052064_Create_Configuration.Designer.cs">
+      <DependentUpon>201807171052064_Create_Configuration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807171153229_Change_Configuration.cs" />
+    <Compile Include="Migrations\201807171153229_Change_Configuration.Designer.cs">
+      <DependentUpon>201807171153229_Change_Configuration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HiQo.StaffManagement.Domain\HiQo.StaffManagement.Domain.csproj">
+      <Project>{5c6f1bdc-8c89-412a-ba52-550fbef21fd4}</Project>
+      <Name>HiQo.StaffManagement.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTOEntities\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Services\" />
+    <Folder Include="UnitOfWork\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201807170932228_CompanyDB-v1.resx">
+      <DependentUpon>201807170932228_CompanyDB-v1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807170942076_Romove-connextion_between_User_and_Category.resx">
+      <DependentUpon>201807170942076_Romove-connextion_between_User_and_Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807171052064_Create_Configuration.resx">
+      <DependentUpon>201807171052064_Create_Configuration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807171153229_Change_Configuration.resx">
+      <DependentUpon>201807171153229_Change_Configuration.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
