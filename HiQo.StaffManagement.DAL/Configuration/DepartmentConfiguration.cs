@@ -8,8 +8,8 @@ namespace HiQo.StaffManagement.DAL.Configuration
         public DepartmentConfiguration()
         {
             Property(g => g.Name).IsRequired().HasMaxLength(30);
-            this.HasMany(r => r.DepartmentsCategories).WithRequired(u => u.Department).HasForeignKey(u => u.DepartmentId);
-            this.HasMany(r => r.Users).WithRequired(u => u.Department).HasForeignKey(u => u.DepartmentId);
+            HasMany(r => r.DepartmentsCategories).WithRequired(u => u.Department).HasForeignKey(u => u.DepartmentId).WillCascadeOnDelete(false);
+            HasMany(r => r.Users).WithRequired(u => u.Department).HasForeignKey(u => u.DepartmentId).WillCascadeOnDelete(false);
         }
     }
 }

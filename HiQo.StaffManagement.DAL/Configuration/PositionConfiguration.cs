@@ -7,8 +7,8 @@ namespace HiQo.StaffManagement.DAL.Configuration
     {
         public PositionConfiguration()
         {
-            this.Property(g => g.Name).IsRequired().HasMaxLength(30);
-            this.HasRequired(g => g.Category).WithMany(r => r.CategoriesPositions).HasForeignKey(g => g.CategoryId);
+            Property(g => g.Name).IsRequired().HasMaxLength(30);
+            HasRequired(g => g.Category).WithMany(r => r.CategoriesPositions).HasForeignKey(g => g.CategoryId);
         }
     }
 }

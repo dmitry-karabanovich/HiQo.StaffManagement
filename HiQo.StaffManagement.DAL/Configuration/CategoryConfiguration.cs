@@ -8,9 +8,9 @@ namespace HiQo.StaffManagement.DAL.Configuration
         public CategoryConfiguration()
         {
             Property(g => g.Name).IsRequired().HasMaxLength(30);
-            this.HasMany(r => r.CategoriesPositions).WithRequired(u => u.Category).HasForeignKey(u => u.CategoryId);
-            this.HasRequired(g => g.Department).WithMany(r => r.DepartmentsCategories).HasForeignKey(g => g.DepartmentId);
-            this.HasMany(r => r.Users).WithRequired(u => u.Category).HasForeignKey(u => u.CategoryId);
+            HasMany(r => r.CategoriesPositions).WithRequired(u => u.Category).HasForeignKey(u => u.CategoryId).WillCascadeOnDelete(false);
+            HasRequired(g => g.Department).WithMany(r => r.DepartmentsCategories).HasForeignKey(g => g.DepartmentId);
+            HasMany(r => r.Users).WithRequired(u => u.Category).HasForeignKey(u => u.CategoryId).WillCascadeOnDelete(false);
         }
     }
 }

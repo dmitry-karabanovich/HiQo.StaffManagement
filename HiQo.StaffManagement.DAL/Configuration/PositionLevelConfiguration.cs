@@ -7,8 +7,8 @@ namespace HiQo.StaffManagement.DAL.Configuration
     {
         public PositionLevelConfiguration()
         {
-            this.Property(g => g.Name).IsRequired().HasMaxLength(30);
-            this.HasMany(r => r.Users).WithRequired(u => u.PositionLevel).HasForeignKey(u => u.PositionLevelId);
+            Property(g => g.Name).IsRequired().HasMaxLength(30);
+            HasMany(r => r.Users).WithRequired(u => u.PositionLevel).HasForeignKey(u => u.PositionLevelId).WillCascadeOnDelete(false);
         }
     }
 }

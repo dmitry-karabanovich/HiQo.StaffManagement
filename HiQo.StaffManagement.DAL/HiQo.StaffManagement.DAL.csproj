@@ -85,6 +85,14 @@
     <Compile Include="Migrations\201807171312571_RemovePositionLevelConnection.Designer.cs">
       <DependentUpon>201807171312571_RemovePositionLevelConnection.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807180922323_SeedDataBase.cs" />
+    <Compile Include="Migrations\201807180922323_SeedDataBase.Designer.cs">
+      <DependentUpon>201807180922323_SeedDataBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807181100236_SeedDataBase1.cs" />
+    <Compile Include="Migrations\201807181100236_SeedDataBase1.Designer.cs">
+      <DependentUpon>201807181100236_SeedDataBase1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -126,6 +134,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807171312571_RemovePositionLevelConnection.resx">
       <DependentUpon>201807171312571_RemovePositionLevelConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807180922323_SeedDataBase.resx">
+      <DependentUpon>201807180922323_SeedDataBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807181100236_SeedDataBase1.resx">
+      <DependentUpon>201807181100236_SeedDataBase1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

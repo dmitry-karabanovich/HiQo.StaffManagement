@@ -12,16 +12,15 @@ namespace HiQo.StaffManagement.DAL.DataBase
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<CompanyContext, Migrations.Configuration>());
         }
 
-        public IDbSet<User> Users { get; set; }
-        public IDbSet<Role> Roles { get; set; }
-        public IDbSet<PositionLevel> PositionLevels { get; set; }
-        public IDbSet<Department> Departments { get; set; }
-        public IDbSet<Category> Categories { get; set; }
-        public IDbSet<Position> Positions { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<PositionLevel> PositionLevels { get; set; }
+        public DbSet<Department> Departments { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Position> Positions { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
             modelBuilder.Configurations.Add(new UserConfiguration());
             modelBuilder.Configurations.Add(new CategoryConfiguration());
             modelBuilder.Configurations.Add(new DepartmentConfiguration());

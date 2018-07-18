@@ -7,8 +7,8 @@ namespace HiQo.StaffManagement.DAL.Configuration
     {
         public RoleConfiguration()
         {
-            this.Property(g => g.Name).IsRequired().HasMaxLength(20);
-            this.HasMany(r => r.Users).WithRequired(u => u.Role).HasForeignKey(u => u.RoleId);
+            Property(g => g.Name).IsRequired().HasMaxLength(20);
+            HasMany(r => r.Users).WithRequired(u => u.Role).HasForeignKey(u => u.RoleId).WillCascadeOnDelete(false);
         }
     }
 }
