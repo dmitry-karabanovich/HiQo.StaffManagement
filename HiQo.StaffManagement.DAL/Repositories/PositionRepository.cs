@@ -4,9 +4,9 @@ using HiQo.StaffManagement.Domain.Repositories;
 
 namespace HiQo.StaffManagement.DAL.Repositories
 {
-    public class UserRepository : BasePepository<User>, IUserRepository
+    public class PositionRepository : BasePepository<Position>, IPositionRepository
     {
-        public UserRepository(DbContext context) : base(context)
+        public PositionRepository(DbContext context) : base(context)
         {
         }
     }
