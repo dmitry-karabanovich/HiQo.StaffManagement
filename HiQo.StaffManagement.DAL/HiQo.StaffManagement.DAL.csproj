@@ -39,6 +39,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,7 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Configuration\CategoryConfiguration.cs" />
     <Compile Include="Configuration\DepartmentConfiguration.cs" />
     <Compile Include="Configuration\PositionConfiguration.cs" />
@@ -93,7 +93,24 @@
     <Compile Include="Migrations\201807181100236_SeedDataBase1.Designer.cs">
       <DependentUpon>201807181100236_SeedDataBase1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807190932391_Tranning.cs" />
+    <Compile Include="Migrations\201807190932391_Tranning.Designer.cs">
+      <DependentUpon>201807190932391_Tranning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807191215110_Tranning2.cs" />
+    <Compile Include="Migrations\201807191215110_Tranning2.Designer.cs">
+      <DependentUpon>201807191215110_Tranning2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807191218250_Tranning3.cs" />
+    <Compile Include="Migrations\201807191218250_Tranning3.Designer.cs">
+      <DependentUpon>201807191218250_Tranning3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807191219490_Tranning4.cs" />
+    <Compile Include="Migrations\201807191219490_Tranning4.Designer.cs">
+      <DependentUpon>201807191219490_Tranning4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\Helpers\SqlFileHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BasePepository.cs" />
     <Compile Include="Repositories\CategoryRepository.cs" />
@@ -112,6 +129,7 @@
   <ItemGroup>
     <Folder Include="DTOEntities\" />
     <Folder Include="Entities\" />
+    <Folder Include="Scripts\" />
     <Folder Include="Services\" />
     <Folder Include="UnitOfWork\" />
   </ItemGroup>
@@ -146,6 +164,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807181100236_SeedDataBase1.resx">
       <DependentUpon>201807181100236_SeedDataBase1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807190932391_Tranning.resx">
+      <DependentUpon>201807190932391_Tranning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807191215110_Tranning2.resx">
+      <DependentUpon>201807191215110_Tranning2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807191218250_Tranning3.resx">
+      <DependentUpon>201807191218250_Tranning3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807191219490_Tranning4.resx">
+      <DependentUpon>201807191219490_Tranning4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiQo.StaffManagement.Domain
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiQo.StaffManagement.Core", "HiQo.StaffManagement.Core\HiQo.StaffManagement.Core.csproj", "{B4A16FF0-E1A7-4D52-B0B7-A776B9FCA162}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3CDB3395-9D98-45EF-B21A-BB8A3B05412D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test1", "Test1\Test1.csproj", "{D9BC9D26-F44F-43F9-9E3C-ECEF670B11FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,9 +43,16 @@ Global
 		{B4A16FF0-E1A7-4D52-B0B7-A776B9FCA162}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4A16FF0-E1A7-4D52-B0B7-A776B9FCA162}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4A16FF0-E1A7-4D52-B0B7-A776B9FCA162}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9BC9D26-F44F-43F9-9E3C-ECEF670B11FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9BC9D26-F44F-43F9-9E3C-ECEF670B11FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9BC9D26-F44F-43F9-9E3C-ECEF670B11FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9BC9D26-F44F-43F9-9E3C-ECEF670B11FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D9BC9D26-F44F-43F9-9E3C-ECEF670B11FB} = {3CDB3395-9D98-45EF-B21A-BB8A3B05412D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6CCC1C17-BD87-4510-92AD-D393F62BE91B}
