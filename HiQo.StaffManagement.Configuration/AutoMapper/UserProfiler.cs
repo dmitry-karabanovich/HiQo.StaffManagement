@@ -16,7 +16,18 @@ namespace HiQo.StaffManagement.Configuration.AutoMapper
                 .ForMember(userDto => userDto.PositionLevel, cfg => cfg.MapFrom(user => user.PositionLevel.Name))
                 .ForMember(userDto => userDto.FirstName, cfg => cfg.MapFrom(user => user.FirstName))
                 .ForMember(userDto => userDto.LastName, cfg => cfg.MapFrom(user => user.LastName))
-                .ForMember(userDto => userDto.DateBirth, cfg => cfg.MapFrom(user => user.DateOfBirth));
+                .ForMember(userDto => userDto.DateBirth, cfg => cfg.MapFrom(user => user.DateOfBirth))
+                .ReverseMap()
+                .ForMember(user => user.Category.Name, cfg => cfg.MapFrom(userDto => userDto.Category))
+                .ForMember(user => user.Role.Name, cfg => cfg.MapFrom(userDto => userDto.Role))
+                .ForMember(user => user.Department.Name, cfg => cfg.MapFrom(userDto => userDto.Department))
+                .ForMember(user => user.Position.Name, cfg => cfg.MapFrom(userDto => userDto.Position))
+                .ForMember(user => user.PositionLevel.Name, cfg => cfg.MapFrom(userDto => userDto.PositionLevel))
+                .ForMember(user => user.FirstName, cfg => cfg.MapFrom(userDto => userDto.FirstName))
+                .ForMember(user => user.LastName, cfg => cfg.MapFrom(userDto => userDto.LastName))
+                .ForMember(user => user.DateOfBirth, cfg => cfg.MapFrom(userDto => userDto.DateBirth));
+
+
         }
     }
 }

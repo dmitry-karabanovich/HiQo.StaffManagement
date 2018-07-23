@@ -10,8 +10,10 @@ namespace HiQo.StaffManagement.Configuration.AutoMapper
         {
             CreateMap<Category, CategoryDto>()
                 .ForMember(categoryDto => categoryDto.Name, cfg => cfg.MapFrom(category => category.Name))
-                .ForMember(categoryDto => categoryDto.Department,
-                    cfg => cfg.MapFrom(category => category.Department.Name));
+                .ForMember(categoryDto => categoryDto.Department, cfg => cfg.MapFrom(category => category.Department.Name))
+                .ReverseMap()
+                .ForMember(category => category.Name, cfg => cfg.MapFrom(categoryDto => categoryDto.Name))
+                .ForMember(category => category.Department.Name, cfg => cfg.MapFrom(categoryDto => categoryDto.Department));
         }
     }
 }

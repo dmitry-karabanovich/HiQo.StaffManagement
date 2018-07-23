@@ -9,7 +9,9 @@ namespace HiQo.StaffManagement.Configuration.AutoMapper
         public RoleProfiler()
         {
             CreateMap<Role, RoleDto>()
-                .ForMember(roleDto => roleDto.Name, cfg => cfg.MapFrom(role => role.Name));
+                .ForMember(roleDto => roleDto.Name, cfg => cfg.MapFrom(role => role.Name))
+                .ReverseMap()
+                .ForMember(role => role.Name, cfg => cfg.MapFrom(roleDto => roleDto.Name));
         }
     }
 }

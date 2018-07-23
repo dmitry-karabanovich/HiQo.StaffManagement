@@ -9,7 +9,9 @@ namespace HiQo.StaffManagement.Configuration.AutoMapper
         DepartmentProfiler()
         {
             CreateMap<Department, DepartmentDto>()
-                .ForMember(departmentDto => departmentDto.Name, cfg => cfg.MapFrom(department => department.Name));
+                .ForMember(departmentDto => departmentDto.Name, cfg => cfg.MapFrom(department => department.Name))
+                .ReverseMap()
+                .ForMember(department => department.Name, cfg => cfg.MapFrom(departmentDto => departmentDto.Name));
         }
     }
 }
