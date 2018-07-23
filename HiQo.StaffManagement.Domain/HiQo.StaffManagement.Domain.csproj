@@ -40,7 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="EntitiesDto\CategoryDto.cs" />
+    <Compile Include="EntitiesDto\DepartmentDto.cs" />
+    <Compile Include="EntitiesDto\PositionDto.cs" />
+    <Compile Include="EntitiesDto\PositionLevelDto.cs" />
+    <Compile Include="EntitiesDto\RoleDto.cs" />
+    <Compile Include="EntitiesDto\UserDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ICategoryRepository.cs" />
     <Compile Include="Repositories\IDepartmentRepository.cs" />
@@ -49,10 +54,13 @@
     <Compile Include="Repositories\IRepository.cs" />
     <Compile Include="Repositories\IRoleRepository.cs" />
     <Compile Include="Repositories\IUserRepository.cs" />
+    <Compile Include="Use Case\IDepartmentService.cs" />
+    <Compile Include="Use Case\IRoleService.cs" />
+    <Compile Include="Use Case\IService.cs" />
+    <Compile Include="Use Case\IUserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
-    <Folder Include="Services\" />
     <Folder Include="UnitOfWork\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

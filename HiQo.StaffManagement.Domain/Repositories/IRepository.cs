@@ -5,16 +5,12 @@ using System.Linq.Expressions;
 
 namespace HiQo.StaffManagement.Domain.Repositories
 {
-    public interface IRepository<TEntity> where TEntity : class
+    public interface IRepository 
     {
-        IEnumerable<TEntity> GetAll();
-
-        IEnumerable<TEntity> Get(
-            Expression<Func<TEntity, bool>> filter = null,
-            Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null);
-
-        void Add(TEntity entity);
-        void Remove(TEntity entity);
-        void Update(TEntity entity);
+        IEnumerable<TDto> GetAll<TDto>() where TDto : class;
+        IEnumerable<TDto> GetByName<TDto>() where TDto : class;
+        void Add<TDto>(TDto entity) where TDto : class;
+        void Remove<TDto>(TDto entity) where TDto : class;
+        void Update<TDto>(TDto entity) where TDto : class;
     }
 }

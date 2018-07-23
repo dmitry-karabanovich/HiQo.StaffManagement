@@ -1,15 +1,14 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using HiQo.StaffManagement.DAL.DataBase;
 using HiQo.StaffManagement.DAL.Repositories;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Xunit;
+using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
-namespace Test1
+namespace HiQo.StaffManagement.DAL.Tests
 {
-    [TestClass]
     public class UnitTest1
     {
-        [TestMethod]
+        [Fact]
         public void TestMethod1()
         {
             UserRepository userRepository = new UserRepository(new CompanyContext());

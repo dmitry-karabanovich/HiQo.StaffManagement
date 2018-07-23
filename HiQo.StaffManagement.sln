@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiQo.StaffManagement.Core",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3CDB3395-9D98-45EF-B21A-BB8A3B05412D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test1", "Test1\Test1.csproj", "{D9BC9D26-F44F-43F9-9E3C-ECEF670B11FB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiQo.StaffManagement.DAL.Tests", "Test1\HiQo.StaffManagement.DAL.Tests.csproj", "{D9BC9D26-F44F-43F9-9E3C-ECEF670B11FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

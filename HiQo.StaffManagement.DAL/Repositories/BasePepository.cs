@@ -21,33 +21,29 @@ namespace HiQo.StaffManagement.DAL.Repositories
         public virtual void Add(TEntity entity)
         {
             _dbSet.Add(entity);
+            _dbContext.SaveChanges();
         }
 
         public virtual void Remove(TEntity entityToDelete)
         {
             if (_dbContext.Entry(entityToDelete).State == EntityState.Detached) _dbSet.Attach(entityToDelete);
-
             _dbSet.Remove(entityToDelete);
+            _dbContext.SaveChanges();
         }
 
         public virtual void Update(TEntity entity)
         {
             _dbSet.Attach(entity);
             _dbContext.Entry(entity).State = EntityState.Modified;
+            _dbContext.SaveChanges();
         }
 
         public virtual IEnumerable<TEntity> GetAll()
         {
             return _dbSet.AsNoTracking().ToList();
         }
-
-        public IEnumerable<TEntity> Get(Expression<Func<TEntity, bool>> filter = null,
-            Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null)
-        {
-            IQueryable<TEntity> query = _dbSet;
-            if (filter != null) query = query.Where(filter);
-            return orderBy != null ? orderBy(query).ToList() : query.ToList();
-        }
+        //GetByName
+        //GetById
 
         public virtual void Remove(object id)
         {

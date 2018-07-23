@@ -119,6 +119,8 @@
     <Compile Include="Repositories\PositionRepository.cs" />
     <Compile Include="Repositories\RoleRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Services\DepartmentService.cs" />
+    <Compile Include="Services\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HiQo.StaffManagement.Domain\HiQo.StaffManagement.Domain.csproj">
@@ -130,7 +132,6 @@
     <Folder Include="DTOEntities\" />
     <Folder Include="Entities\" />
     <Folder Include="Scripts\" />
-    <Folder Include="Services\" />
     <Folder Include="UnitOfWork\" />
   </ItemGroup>
   <ItemGroup>
