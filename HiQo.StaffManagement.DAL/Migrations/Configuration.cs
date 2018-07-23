@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using HiQo.StaffManagement.DAL.DataBase;
-using HiQo.StaffManagement.DAL.DataBase.Models;
 
 namespace HiQo.StaffManagement.DAL.Migrations
 {

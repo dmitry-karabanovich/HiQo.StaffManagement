@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using HiQo.StaffManagement.DAL.DataBase.Models;
+using HiQo.StaffManagement.DAL.DataBase.Entities;
 using HiQo.StaffManagement.Domain.EntitiesDto;
 
 namespace HiQo.StaffManagement.Configuration.AutoMapper

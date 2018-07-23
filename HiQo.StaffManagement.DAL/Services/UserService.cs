@@ -3,58 +3,63 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HiQo.StaffManagement.DAL.Repositories;
+using HiQo.StaffManagement.Domain.EntitiesDto;
 using HiQo.StaffManagement.Domain.Repositories;
-using HiQo.StaffManagement.Domain.Use_Case;
+using HiQo.StaffManagement.Domain.Services;
 
 namespace HiQo.StaffManagement.DAL.Services
 {
     class UserService : IUserService
     {
-        private IUserRepository _userRepository;
+        private readonly IUserRepository _userRepository;
 
+        public UserService(IUserRepository userRepository)
+        {
+            _userRepository = userRepository;
+        }
 
+        public IEnumerable<UserDto> GetAll()
+        {
+            return _userRepository.GetAll<UserDto>();
+        }
 
-        public IEnumerable<TEntity> GetAll<TEntity>() where TEntity : class
+        public UserDto GetById()
         {
             throw new NotImplementedException();
         }
 
-        public TEntity GetById<TEntity>() where TEntity : class
+        public IEnumerable<UserDto> GetByFirstName(string firstName)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<TEntity> GetByFirstName<TEntity>(string firstName) where TEntity : class
+        public IEnumerable<UserDto> GetByLastName(string lastName)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<TEntity> GetByLastName<TEntity>(string lastName) where TEntity : class
+        public IEnumerable<UserDto> GetByRole(string role)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<TEntity> GetByRole<TEntity>(string role) where TEntity : class
+        public IEnumerable<UserDto> GetByDepertment(string depertment)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<TEntity> GetByDepertment<TEntity>(string depertment) where TEntity : class
+        public IEnumerable<UserDto> GetByCategory(string category)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<TEntity> GetByCategory<TEntity>(string category) where TEntity : class
+        public IEnumerable<UserDto> GetByPosition(string position)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<TEntity> GetByPosition<TEntity>(string position) where TEntity : class
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<TEntity> GetByBirthDate<TEntity>(DateTime bithDate) where TEntity : class
+        public IEnumerable<UserDto> GetByBirthDate(DateTime bithDate)
         {
             throw new NotImplementedException();
         }

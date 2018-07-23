@@ -54,10 +54,12 @@
     <Compile Include="Repositories\IRepository.cs" />
     <Compile Include="Repositories\IRoleRepository.cs" />
     <Compile Include="Repositories\IUserRepository.cs" />
-    <Compile Include="Use Case\IDepartmentService.cs" />
-    <Compile Include="Use Case\IRoleService.cs" />
-    <Compile Include="Use Case\IService.cs" />
-    <Compile Include="Use Case\IUserService.cs" />
+    <Compile Include="Services\ICategoryService.cs" />
+    <Compile Include="Services\IDepartmentService.cs" />
+    <Compile Include="Services\IPositionLevelService.cs" />
+    <Compile Include="Services\IPositionService.cs" />
+    <Compile Include="Services\IRoleService.cs" />
+    <Compile Include="Services\IUserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />

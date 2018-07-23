@@ -1,7 +1,6 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace HiQo.StaffManagement.DAL.DataBase.Models
+namespace HiQo.StaffManagement.DAL.DataBase.Entities
 {
     public class User
     {

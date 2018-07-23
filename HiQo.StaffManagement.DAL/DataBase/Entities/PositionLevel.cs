@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
-namespace HiQo.StaffManagement.DAL.DataBase.Models
+namespace HiQo.StaffManagement.DAL.DataBase.Entities
 {
     public class PositionLevel
     {

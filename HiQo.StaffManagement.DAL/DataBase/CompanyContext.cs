@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using HiQo.StaffManagement.DAL.Configuration;
-using HiQo.StaffManagement.DAL.DataBase.Models;
+using HiQo.StaffManagement.DAL.DataBase.Entities;
 
 namespace HiQo.StaffManagement.DAL.DataBase
 {

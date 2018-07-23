@@ -1,5 +1,5 @@
 ﻿using System.Data.Entity.ModelConfiguration;
-using HiQo.StaffManagement.DAL.DataBase.Models;
+using HiQo.StaffManagement.DAL.DataBase.Entities;
 
 namespace HiQo.StaffManagement.DAL.Configuration
 {
