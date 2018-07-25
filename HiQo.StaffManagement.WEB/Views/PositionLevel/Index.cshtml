@@ -1,0 +1,37 @@
+﻿@model IEnumerable<HiQo.StaffManagement.Domain.EntitiesDto.PositionLevelDto>
+@{
+    ViewBag.Title = "Index";
+}
+<html>
+<head>@ViewBag.Title</head>
+<body>
+    <h2>Index</h2>
+<table class="table">
+    <thead>
+    <tr>
+        <td>Name</td>
+        <td>Level</td>
+    </tr>
+    </thead>
+    <tbody class="body-content">
+    @foreach (var positionLevel in Model)
+    {
+        <tr>
+            <td>@positionLevel.Name</td>
+            <td>
+                @if (positionLevel.Level == null)
+                {
+                    <p>-</p>
+                }
+                else
+                {
+                    <p>@positionLevel.Level</p>
+                }
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+</body>
+</html>
+

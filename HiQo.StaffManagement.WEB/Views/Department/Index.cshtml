@@ -1,0 +1,26 @@
+﻿@model IEnumerable<HiQo.StaffManagement.Domain.EntitiesDto.DepartmentDto>
+@{
+    ViewBag.Title = "Index";
+}
+<html>
+<head>@ViewBag.Title</head>
+<body>
+<h2>Department</h2>
+<table class="table">
+    <thead>
+    <tr>
+        <td>Name</td>
+    </tr>
+    </thead>
+    <tbody class=" body-content">
+    @foreach (var department in Model)
+    {
+        <tr>
+            <td>@department.Name</td>
+        </tr>
+    }
+    </tbody>
+</table>
+</body>
+</html>
+
