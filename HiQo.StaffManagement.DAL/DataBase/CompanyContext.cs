@@ -1,5 +1,4 @@
 ﻿using System.Data.Entity;
-using System.Data.Entity.ModelConfiguration.Conventions;
 using HiQo.StaffManagement.DAL.Configuration;
 using HiQo.StaffManagement.DAL.DataBase.Entities;
 

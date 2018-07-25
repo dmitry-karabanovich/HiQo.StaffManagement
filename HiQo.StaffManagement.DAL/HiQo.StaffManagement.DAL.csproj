@@ -62,6 +62,7 @@
     <Compile Include="Configuration\RoleConfiguration.cs" />
     <Compile Include="Configuration\UserConfiguration.cs" />
     <Compile Include="DataBase\CompanyContext.cs" />
+    <Compile Include="DataBase\Entities\BaseEntity.cs" />
     <Compile Include="DataBase\Entities\Category.cs" />
     <Compile Include="DataBase\Entities\Department.cs" />
     <Compile Include="DataBase\Entities\Position.cs" />
@@ -116,18 +117,28 @@
     <Compile Include="Migrations\201807191219490_Tranning4.Designer.cs">
       <DependentUpon>201807191219490_Tranning4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807240947304_Tranning1.cs" />
+    <Compile Include="Migrations\201807240947304_Tranning1.Designer.cs">
+      <DependentUpon>201807240947304_Tranning1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807241014513_Virtual.cs" />
+    <Compile Include="Migrations\201807241014513_Virtual.Designer.cs">
+      <DependentUpon>201807241014513_Virtual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807241639228_AddVanyaDmitrovichUser.cs" />
+    <Compile Include="Migrations\201807241639228_AddVanyaDmitrovichUser.Designer.cs">
+      <DependentUpon>201807241639228_AddVanyaDmitrovichUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\Helpers\SqlFileHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\BasePepository.cs" />
+    <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\CategoryRepository.cs" />
     <Compile Include="Repositories\DepartmentRepository.cs" />
     <Compile Include="Repositories\PositionLevelRepository.cs" />
     <Compile Include="Repositories\PositionRepository.cs" />
     <Compile Include="Repositories\RoleRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
-    <Compile Include="Services\DepartmentService.cs" />
-    <Compile Include="Services\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HiQo.StaffManagement.Domain\HiQo.StaffManagement.Domain.csproj">
@@ -182,6 +193,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807191219490_Tranning4.resx">
       <DependentUpon>201807191219490_Tranning4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807240947304_Tranning1.resx">
+      <DependentUpon>201807240947304_Tranning1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807241014513_Virtual.resx">
+      <DependentUpon>201807241014513_Virtual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807241639228_AddVanyaDmitrovichUser.resx">
+      <DependentUpon>201807241639228_AddVanyaDmitrovichUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

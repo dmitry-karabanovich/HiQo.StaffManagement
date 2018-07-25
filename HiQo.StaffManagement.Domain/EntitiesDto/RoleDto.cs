@@ -1,8 +1,11 @@
-﻿namespace HiQo.StaffManagement.Domain.EntitiesDto
+﻿using System.Collections.Generic;
+
+namespace HiQo.StaffManagement.Domain.EntitiesDto
 {
     public class RoleDto
     {
-        public int RoleId { get; set; }
+        public int RoleDtoId { get; set; }
         public string Name { get; set; }
-    }
+        public ICollection<UserDto> Users { get; set; }
+    } 
 }

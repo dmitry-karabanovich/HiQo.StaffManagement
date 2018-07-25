@@ -1,16 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using HiQo.StaffManagement.DAL.Repositories;
 using HiQo.StaffManagement.Domain.EntitiesDto;
 using HiQo.StaffManagement.Domain.Repositories;
-using HiQo.StaffManagement.Domain.Services;
+using HiQo.StaffManagement.Domain.Services.Interface;
 
-namespace HiQo.StaffManagement.DAL.Services
+namespace HiQo.StaffManagement.Domain.Services
 {
-    class UserService : IUserService
+    public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
 

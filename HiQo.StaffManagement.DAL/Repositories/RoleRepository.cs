@@ -8,9 +8,10 @@ using HiQo.StaffManagement.Domain.Repositories;
 
 namespace HiQo.StaffManagement.DAL.Repositories
 {
-    public class RoleRepository : BasePepository, IRoleRepository
+    public class RoleRepository : BaseRepository<>, IRoleRepository
     {
         private readonly DbSet<Role> _dbSet;
+
         public RoleRepository(CompanyContext context) : base(context)
         {
             _dbSet = context.Set<Role>();
@@ -41,5 +42,11 @@ namespace HiQo.StaffManagement.DAL.Repositories
         {
             throw new System.NotImplementedException();
         }
+
+        public TDto GetById<TDto>() where TDto : class
+        {
+            throw new System.NotImplementedException();
+        }
+
     }
 }

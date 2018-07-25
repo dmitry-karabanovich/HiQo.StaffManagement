@@ -5,6 +5,7 @@ using System.Linq;
 using AutoMapper;
 using HiQo.StaffManagement.DAL.DataBase;
 using HiQo.StaffManagement.DAL.DataBase.Entities;
+using HiQo.StaffManagement.Domain.EntitiesDto;
 using HiQo.StaffManagement.Domain.Repositories;
 
 namespace HiQo.StaffManagement.DAL.Repositories
@@ -15,17 +16,31 @@ namespace HiQo.StaffManagement.DAL.Repositories
 
         public UserRepository(CompanyContext context) : base(context)
         {
+            context.Configuration.LazyLoadingEnabled = false;
             _dbSet = context.Set<User>();
+        }
+
+        public TDto GetById<TDto>() where TDto : class
+        {
+            throw new NotImplementedException();
         }
 
         public void Add<TDto>(TDto entityDto) where TDto : class
         {
             var entity = Mapper.Map<TDto, User>(entityDto);
             _dbSet.Add(entity);
-            _dbContext.SaveChanges();
+            DbContext.SaveChanges();
         }
 
-        public virtual void Remove(object id)
+        public void Update<TDto>(TDto entityDto) where TDto : class
+        {
+            var entity = Mapper.Map<TDto, User>(entityDto);
+            _dbSet.Attach(entity);
+            DbContext.Entry(entity).State = EntityState.Modified;
+            DbContext.SaveChanges();
+        }
+
+        public virtual void Remove(int id)
         {
             var entityToDelete = _dbSet.Find(id);
             Remove(entityToDelete);
@@ -42,7 +57,7 @@ namespace HiQo.StaffManagement.DAL.Repositories
 
         public IEnumerable<TDto> GetAll<TDto>() where TDto : class
         {
-            var users = _dbSet.ToList() as IEnumerable<User>;
+            var users = (_dbSet.Include(_ => _.Category).Include(_ => _.Department).Include(_ => _.Position).Include(_ => _.PositionLevel).Include(_ => _.Role).ToList()) as IEnumerable<User>;
             return Mapper.Map<IEnumerable<User>, IEnumerable<TDto>>(users);
         }
 
@@ -51,11 +66,5 @@ namespace HiQo.StaffManagement.DAL.Repositories
             throw new NotImplementedException();
         }
       
-        public void Update<TDto>(TDto entity) where TDto : class
-        {
-            throw new NotImplementedException();
-            //(_dbSet as DbSet<TEntity>).Attach(entity);
-            //_dbContext.Entry(entity).State = EntityState.Modified;
-        }
     }
 }
