@@ -8,7 +8,7 @@ using HiQo.StaffManagement.Domain.Repositories;
 
 namespace HiQo.StaffManagement.DAL.Repositories
 {
-    public class DepartmentRepository : BaseRepository<>, IDepartmentRepository
+    public class DepartmentRepository : BaseRepository, IDepartmentRepository
     {
         private readonly DbSet<Department> _dbSet;
 

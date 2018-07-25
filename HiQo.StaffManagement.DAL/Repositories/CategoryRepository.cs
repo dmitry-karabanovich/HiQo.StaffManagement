@@ -8,7 +8,7 @@ using HiQo.StaffManagement.Domain.Repositories;
 
 namespace HiQo.StaffManagement.DAL.Repositories
 {
-    public class CategoryRepository : BasePepository, ICategoryRepository
+    public class CategoryRepository : BaseRepository, ICategoryRepository
     {
         private readonly DbSet<Category> _dbSet;
         public CategoryRepository(CompanyContext context) : base(context)

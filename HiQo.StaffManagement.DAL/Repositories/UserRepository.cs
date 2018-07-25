@@ -10,7 +10,7 @@ using HiQo.StaffManagement.Domain.Repositories;
 
 namespace HiQo.StaffManagement.DAL.Repositories
 {
-    public class UserRepository : BasePepository, IUserRepository
+    public class UserRepository : BaseRepository, IUserRepository
     {
         private readonly DbSet<User> _dbSet;
 

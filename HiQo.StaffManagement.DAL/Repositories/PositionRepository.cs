@@ -8,7 +8,7 @@ using HiQo.StaffManagement.Domain.Repositories;
 
 namespace HiQo.StaffManagement.DAL.Repositories
 {
-    public class PositionRepository : BaseRepository<>, IPositionRepository
+    public class PositionRepository : BaseRepository, IPositionRepository
     {
         private readonly DbSet<Position> _dbSet;
 

@@ -2,10 +2,10 @@
 
 namespace HiQo.StaffManagement.DAL.Repositories
 {
-    public abstract class BasePepository
+    public abstract class BaseRepository
     {
         protected readonly DbContext DbContext;
-        protected BasePepository(DbContext context)
+        protected BaseRepository(DbContext context)
         {
             DbContext = context;
         }

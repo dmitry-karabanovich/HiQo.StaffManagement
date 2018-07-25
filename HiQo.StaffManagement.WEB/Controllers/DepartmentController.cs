@@ -1,27 +1,20 @@
-﻿using System.Collections.Generic;
-using System.Web.Mvc;
-using HiQo.StaffManagement.DAL.DataBase;
-using HiQo.StaffManagement.DAL.Repositories;
-using HiQo.StaffManagement.Domain.EntitiesDto;
-using HiQo.StaffManagement.Domain.Repositories;
-using HiQo.StaffManagement.Domain.Services;
+﻿using System.Web.Mvc;
 using HiQo.StaffManagement.Domain.Services.Interface;
 
 namespace HiQo.StaffManagement.WEB.Controllers
 {
     public class DepartmentController : Controller
     {
-        // GET: Depertment
+        private readonly IDepartmentService _service;
+
+        public DepartmentController(IDepartmentService service)
+        {
+            _service = service;
+        }
+
         public ActionResult Index()
         {
-            IEnumerable<DepartmentDto> departments;
-            using (CompanyContext context = new CompanyContext())
-            {
-                IDepartmentRepository departmentRepository = new DepartmentRepository(context);
-                IDepartmentService service = new DepartmentService(departmentRepository);
-                departments = service.GetAll();
-            }
-            return View(departments);
+            return View(_service.GetAll());
         }
     }
 }
