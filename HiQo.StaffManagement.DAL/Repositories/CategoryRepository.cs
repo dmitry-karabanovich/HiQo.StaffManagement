@@ -18,7 +18,7 @@ namespace HiQo.StaffManagement.DAL.Repositories
 
         public IEnumerable<TDto> GetAll<TDto>() where TDto : class
         {
-            var categories = _dbSet.ToList() as IEnumerable<Category>;
+            var categories = (_dbSet.Include(_=> _.Department).ToList()) as IEnumerable<Category>;
             return Mapper.Map<IEnumerable<Category>, IEnumerable<TDto>>(categories);
         }
 
@@ -27,7 +27,7 @@ namespace HiQo.StaffManagement.DAL.Repositories
             throw new System.NotImplementedException();
         }
 
-        public TDto GetById<TDto>() where TDto : class
+        public TDto GetById<TDto>(int id) where TDto : class
         {
             throw new System.NotImplementedException();
         }

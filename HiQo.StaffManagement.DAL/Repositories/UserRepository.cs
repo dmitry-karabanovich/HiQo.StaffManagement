@@ -20,9 +20,9 @@ namespace HiQo.StaffManagement.DAL.Repositories
             _dbSet = context.Set<User>();
         }
 
-        public TDto GetById<TDto>() where TDto : class
+        public TDto GetById<TDto>(int id) where TDto : class
         {
-            throw new NotImplementedException();
+           return Mapper.Map<User, TDto>(_dbSet.Include(_ => _.Category).Include(_ => _.Department).Include(_ => _.Position).Include(_ => _.PositionLevel).Include(_ => _.Role).FirstOrDefault(_ => _.UserId == id));
         }
 
         public void Add<TDto>(TDto entityDto) where TDto : class

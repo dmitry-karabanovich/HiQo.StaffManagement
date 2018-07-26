@@ -7,7 +7,7 @@ namespace HiQo.StaffManagement.Domain.Services.Interface
     public interface IUserService
     {
         IEnumerable<UserDto> GetAll();
-        UserDto GetById();
+        UserDto GetById(int id);
         IEnumerable<UserDto> GetByFirstName(string firstName);
         IEnumerable<UserDto> GetByLastName(string lastName);
         IEnumerable<UserDto> GetByRole(string role);

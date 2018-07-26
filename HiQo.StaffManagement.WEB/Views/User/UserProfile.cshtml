@@ -1,0 +1,39 @@
+﻿@model HiQo.StaffManagement.Domain.EntitiesDto.UserDto
+@{
+    ViewBag.Title = "UserProfile";
+}
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+<div class=" panel panel-default" style="width: 400px">
+    <div class="panel-heading alert-danger h4">@Model.FirstName @Model.LastName</div>
+    <div class="panel-body">
+        <p><b>Date of Birth: </b>@Model.DateBirth.ToShortDateString()</p>
+        <p><b>Department:</b> @Model.Department.Name</p>
+        <p><b>Category:</b> @Model.Category.Name</p>
+        <p><b>Position:</b> @Model.Position.Name</p>
+        <p><b>Position level:</b> @Model.PositionLevel.Name</p>
+        <p>
+            <b>Level:</b>
+            @if (Model.PositionLevel.Level == null)
+            {
+                 <span>-</span>
+            }
+            else
+            {
+                 <span>@Model.PositionLevel.Level</span>
+            }
+        </p>
+    </div>
+    <div class="panel-footer">
+        @using (Html.BeginForm("UpdateUser", "User", new {userId = Model.UserDtoId})) 
+        { 
+            <button type="submit" class="btn btn-default">Update Profile</button> 
+        }
+    </div>
+</div>
+</body>
+</html>
+

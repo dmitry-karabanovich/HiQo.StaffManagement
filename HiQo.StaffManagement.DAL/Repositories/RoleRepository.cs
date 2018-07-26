@@ -43,7 +43,7 @@ namespace HiQo.StaffManagement.DAL.Repositories
             throw new System.NotImplementedException();
         }
 
-        public TDto GetById<TDto>() where TDto : class
+        public TDto GetById<TDto>(int id) where TDto : class
         {
             throw new System.NotImplementedException();
         }

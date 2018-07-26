@@ -21,11 +21,10 @@ namespace HiQo.StaffManagement.Configuration.CastleWinsdor
             container.Register(Component.For<ICategoryRepository>().ImplementedBy<CategoryRepository>().LifestylePerWebRequest());
 
             container.Register(Component.For<IUserService>().ImplementedBy(typeof(UserService)).LifestylePerWebRequest());
-            //container.Register(Component.For<IRoleService>().ImplementedBy<RoleService>().LifestylePerWebRequest());
-            //container.Register(Component.For<IPositionService>().ImplementedBy<PositionService>().LifestylePerWebRequest());
+            container.Register(Component.For<IPositionService>().ImplementedBy<PositionService>().LifestylePerWebRequest());
             container.Register(Component.For<IPositionLevelService>().ImplementedBy<PositionLevelService>().LifestylePerWebRequest());
             container.Register(Component.For<IDepartmentService>().ImplementedBy<DepartmentService>().LifestylePerWebRequest());
-            //container.Register(Component.For<ICategoryService>().ImplementedBy<CategoryService>().LifestylePerWebRequest());
+            container.Register(Component.For<ICategoryService>().ImplementedBy<CategoryService>().LifestylePerWebRequest());
 
             container.Register(Component.For<CompanyContext>().LifestylePerWebRequest());
         }

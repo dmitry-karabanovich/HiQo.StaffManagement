@@ -54,6 +54,7 @@
     <Compile Include="Repositories\IRepository.cs" />
     <Compile Include="Repositories\IRoleRepository.cs" />
     <Compile Include="Repositories\IUserRepository.cs" />
+    <Compile Include="Services\CategoryService.cs" />
     <Compile Include="Services\DepartmentService.cs" />
     <Compile Include="Services\Interface\ICategoryService.cs" />
     <Compile Include="Services\Interface\IDepartmentService.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="Services\Interface\IRoleService.cs" />
     <Compile Include="Services\Interface\IUserService.cs" />
     <Compile Include="Services\PositionLevelService.cs" />
+    <Compile Include="Services\PositionService.cs" />
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>
   <ItemGroup>

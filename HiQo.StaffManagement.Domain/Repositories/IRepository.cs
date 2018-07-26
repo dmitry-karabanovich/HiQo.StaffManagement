@@ -6,7 +6,7 @@ namespace HiQo.StaffManagement.Domain.Repositories
     {
         IEnumerable<TDto> GetAll<TDto>() where TDto : class;
         IEnumerable<TDto> GetByName<TDto>() where TDto : class;
-        TDto GetById<TDto>() where TDto : class;
+        TDto GetById<TDto>(int id) where TDto : class;
         void Add<TDto>(TDto entity) where TDto : class;
         void Remove<TDto>(TDto entity) where TDto : class;
         void Update<TDto>(TDto entity) where TDto : class;

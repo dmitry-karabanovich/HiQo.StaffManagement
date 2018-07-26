@@ -20,9 +20,9 @@ namespace HiQo.StaffManagement.Domain.Services
             return _userRepository.GetAll<UserDto>();
         }
 
-        public UserDto GetById()
+        public UserDto GetById(int id)
         {
-            throw new NotImplementedException();
+            return _userRepository.GetById<UserDto>(id);
         }
 
         public IEnumerable<UserDto> GetByFirstName(string firstName)
