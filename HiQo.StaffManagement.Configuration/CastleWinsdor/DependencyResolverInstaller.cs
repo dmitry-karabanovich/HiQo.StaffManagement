@@ -25,6 +25,7 @@ namespace HiQo.StaffManagement.Configuration.CastleWinsdor
             container.Register(Component.For<IPositionLevelService>().ImplementedBy<PositionLevelService>().LifestylePerWebRequest());
             container.Register(Component.For<IDepartmentService>().ImplementedBy<DepartmentService>().LifestylePerWebRequest());
             container.Register(Component.For<ICategoryService>().ImplementedBy<CategoryService>().LifestylePerWebRequest());
+            container.Register(Component.For<IUpsertUserService>().ImplementedBy<UpsertUserService>().LifestylePerWebRequest());
 
             container.Register(Component.For<CompanyContext>().LifestylePerWebRequest());
         }

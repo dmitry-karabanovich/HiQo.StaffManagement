@@ -5,7 +5,6 @@ using System.Linq;
 using AutoMapper;
 using HiQo.StaffManagement.DAL.DataBase;
 using HiQo.StaffManagement.DAL.DataBase.Entities;
-using HiQo.StaffManagement.Domain.EntitiesDto;
 using HiQo.StaffManagement.Domain.Repositories;
 
 namespace HiQo.StaffManagement.DAL.Repositories

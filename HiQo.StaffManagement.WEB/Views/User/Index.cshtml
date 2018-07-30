@@ -7,37 +7,39 @@
     <title>@ViewBag.Title </title>
 </head>
 <body>
-<h2>User</h2>
-<table class="table">
-    <thead class="alert-danger">  @*А есть "thead-dark" вот он не работает,
-                                      причем инфа про него из доументации*@
-    <tr>
-        <td>First Name</td>
-        <td>Second Name</td>
-        <td>Position</td>  
-        <td>Position level</td>
-        <td></td>
-    </tr>
-    </thead>
-    <tbody class="tab-content">
-    @foreach (var user in Model)
-    {
-        <tr>
-            <td>@user.FirstName</td>
-            <td>@user.LastName</td>
-            <td>@user.Position.Name</td>
-            <td>@user.PositionLevel.Name</td>
-            <td> @*<button type="submit" class="btn-default btn-sm">@Html.ActionLink("Users", "GetUserProfile", "User", new { userid = user.UserDtoId},null)</button>*@
-                @using (Html.BeginForm("GetUserProfile", "User", new {userId = user.UserDtoId})) 
-                { 
-                    <button type="submit" class="btn btn-default">@user.FirstName Profile</button> 
-                }
-           
-            </td>
-        </tr>
-    }
-    </tbody>
+    <h2>User</h2>
+    <table class="table">
+        <thead class="alert-danger">
+            @*А есть "thead-dark" вот он не работает,
+                причем инфа про него из доументации*@
+            <tr>
+                <td>First Name</td>
+                <td>Second Name</td>
+                <td>Position</td>
+                <td>Position level</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody class="tab-content">
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.FirstName</td>
+                    <td>@user.LastName</td>
+                    <td>@user.Position.Name</td>
+                    <td>@user.PositionLevel.Name</td>
+                    <td>
+                        @*<button type="submit" class="btn-default btn-sm">@Html.ActionLink("Users", "GetUserProfile", "User", new { userid = user.UserDtoId},null)</button>*@
+                        @using (Html.BeginForm("GetUserProfile", "User", new { userId = user.UserDtoId }))
+                        {
+                            <button type="submit" class="btn btn-default">@user.FirstName Profile</button>
+                        }
 
-</table>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
 </body>
 </html>

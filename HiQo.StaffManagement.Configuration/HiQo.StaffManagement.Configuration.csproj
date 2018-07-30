@@ -83,6 +83,7 @@
     <Compile Include="AutoMapper\Profilers\PositionLevelProfiler.cs" />
     <Compile Include="AutoMapper\Profilers\PositionProfiler.cs" />
     <Compile Include="AutoMapper\Profilers\RoleProfiler.cs" />
+    <Compile Include="AutoMapper\Profilers\UpsertUserProfile.cs" />
     <Compile Include="AutoMapper\Profilers\UserProfiler.cs" />
     <Compile Include="CastleWinsdor\ControllersInstaller.cs" />
     <Compile Include="CastleWinsdor\DependencyResolverInstaller.cs" />
@@ -91,6 +92,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HiQo.StaffManagement.Core\HiQo.StaffManagement.Core.csproj">
+      <Project>{b4a16ff0-e1a7-4d52-b0b7-a776b9fca162}</Project>
+      <Name>HiQo.StaffManagement.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HiQo.StaffManagement.DAL\HiQo.StaffManagement.DAL.csproj">
       <Project>{1cf4f463-1ab8-4e69-bb99-8833ca55fb05}</Project>
       <Name>HiQo.StaffManagement.DAL</Name>

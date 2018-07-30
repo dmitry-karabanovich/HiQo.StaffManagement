@@ -10,7 +10,7 @@ namespace HiQo.StaffManagement.DAL.Migrations
     {
         public override void Up()
         {
-            Sql(SqlFileHelper.GetFile("tranning"));           
+            //Sql(SqlFileHelper.GetFile("Trainning.sql"));           
         }
         
         public override void Down()

@@ -18,7 +18,7 @@ namespace HiQo.StaffManagement.DAL.Repositories
 
         public IEnumerable<TDto> GetAll<TDto>() where TDto : class
         {
-            var categories = (_dbSet.Include(_=> _.Department).ToList()) as IEnumerable<Category>;
+            var categories = (_dbSet.Include(_ => _.Department).ToList()) as IEnumerable<Category>;
             return Mapper.Map<IEnumerable<Category>, IEnumerable<TDto>>(categories);
         }
 
