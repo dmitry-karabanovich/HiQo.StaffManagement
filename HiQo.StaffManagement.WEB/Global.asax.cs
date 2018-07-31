@@ -16,7 +16,7 @@ namespace HiQo.StaffManagement.WEB
             RouteConfig.RegisterRoutes(RouteTable.Routes,Assembly.GetExecutingAssembly());
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AutoMappingConfig.ConfigureAutoMapping();
-            IocContainer.SetUp();
+            IocContainer.SetUp(Assembly.GetExecutingAssembly().GetName().Name);
         }
     }
 }

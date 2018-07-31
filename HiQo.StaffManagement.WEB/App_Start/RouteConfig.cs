@@ -14,7 +14,7 @@ namespace HiQo.StaffManagement.WEB
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "User", action = "Index", id = UrlParameter.Optional }, 
-                namespaces: new []{assembly.GetName().Name + ".Controllers"}
+                namespaces: new []{assembly.GetName().Name + ".Controllers" }
             );
         }
     }

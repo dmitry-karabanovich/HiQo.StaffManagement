@@ -8,20 +8,23 @@ namespace HiQo.StaffManagement.Configuration.CastleWinsdor
     {
         private static IWindsorContainer _container;
 
-        public static void SetUp()
+        public static void SetUp(string assembly)
         {
-           // _container = new WindsorContainer().Install(FromAssembly.This());
-
-           // var controllerFactory = new WindsorControllerFactory(_container.Kernel);
-            //ControllerBuilder.Current.SetControllerFactory(controllerFactory);
-
             _container = new WindsorContainer();
-            var s = FromAssembly.Named("HiQo.StaffManagement.Configuration");
-            _container =_container.Install(s);
 
+            var controllersInstaller = new ControllersInstaller(assembly);
+            controllersInstaller.Install(_container,null);
+
+            var resolveInstaller = new DependencyResolverInstaller();
+            resolveInstaller.Install(_container,null);
+          
             var controllerFactory = new WindsorControllerFactory(_container.Kernel);
             ControllerBuilder.Current.SetControllerFactory(controllerFactory);
 
         }
     }
 }
+
+//_container = new WindsorContainer();
+//var s = FromAssembly.Named("HiQo.StaffManagement.Configuration");
+//_container = _container.Install(s);

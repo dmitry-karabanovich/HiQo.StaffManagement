@@ -30,7 +30,7 @@ namespace HiQo.StaffManagement.WEB.Areas.Admin.Controllers
             var categoryList = new SelectList(info.CategoryDtos, "CategoryDtoId", "Name");
             var positionList = new SelectList(info.PositionDtos, "PositionDtoId", "Name");
             var positionLevelList = new SelectList(info.PositionLevelDtos, "PositionLevelDtoId", "Name");
-            var roleList = new SelectList(info.RoleDtos,"RoleDtoId","Name");
+            var roleList = new SelectList(info.RoleDtos, "RoleDtoId", "Name");
             ViewBag.Departments = departmentList;
             ViewBag.Category = categoryList;
             ViewBag.Position = positionList;

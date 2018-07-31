@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Web.Mvc;
-using AutoMapper;
-using HiQo.StaffManagement.Domain.EntitiesDto;
 using HiQo.StaffManagement.Domain.Services.Interface;
-using HiQo.StaffManagement.Core.Models;
 
 namespace HiQo.StaffManagement.WEB.Controllers
 {
@@ -25,7 +22,7 @@ namespace HiQo.StaffManagement.WEB.Controllers
 
         public ActionResult GetUserProfile(int userId)
         {
-            return View("UserProfile",_service.GetById(userId));
+            return View("UserProfile", _service.GetById(userId));
         }
     }
 }

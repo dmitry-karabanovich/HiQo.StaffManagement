@@ -11,8 +11,8 @@ namespace HiQo.StaffManagement.WEB.Areas.Admin
             context.MapRoute(
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional },
-                namespaces: new []{"HiQo.StaffManagement.WEB.Areas.Admin.Controllers"}
+                new {action = "Index", id = UrlParameter.Optional },
+                namespaces: new []{ "HiQo.StaffManagement.WEB.Areas.Admin.Controllers" }
             );
         }
     }
