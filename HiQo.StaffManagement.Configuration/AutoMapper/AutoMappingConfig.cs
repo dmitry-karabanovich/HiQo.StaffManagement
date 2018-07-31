@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using AutoMapper;
-using HiQo.StaffManagement.Core.Models;
 
 namespace HiQo.StaffManagement.Configuration.AutoMapper
 {

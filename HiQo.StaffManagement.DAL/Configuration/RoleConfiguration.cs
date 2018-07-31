@@ -3,7 +3,7 @@ using HiQo.StaffManagement.DAL.DataBase.Entities;
 
 namespace HiQo.StaffManagement.DAL.Configuration
 {
-    class RoleConfiguration : EntityTypeConfiguration<Role>
+    public class RoleConfiguration : EntityTypeConfiguration<Role>
     {
         public RoleConfiguration()
         {

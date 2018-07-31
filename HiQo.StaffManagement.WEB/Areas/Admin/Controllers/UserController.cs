@@ -33,7 +33,8 @@ namespace HiQo.StaffManagement.WEB.Areas.Admin.Controllers
             ViewBag.Category = categoryList;
             ViewBag.Position = positionList;
             ViewBag.PositionLevel = positionLevelList;
-            return View("UpsertUser", Mapper.Map<UserDto, UpsertUser>(_service.GetById(userId)));
+            var user = Mapper.Map<UserDto, UpsertUser>(_service.GetById(userId));
+            return View("UpsertUser", user);
         }
 
         public ActionResult CreateUser(int id)

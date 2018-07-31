@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace HiQo.StaffManagement.Core.Models
+﻿namespace HiQo.StaffManagement.Core.Models
 {
     public class UpsertUser
     {

@@ -62,7 +62,6 @@
     <Compile Include="Configuration\RoleConfiguration.cs" />
     <Compile Include="Configuration\UserConfiguration.cs" />
     <Compile Include="DataBase\CompanyContext.cs" />
-    <Compile Include="DataBase\Entities\BaseEntity.cs" />
     <Compile Include="DataBase\Entities\Category.cs" />
     <Compile Include="DataBase\Entities\Department.cs" />
     <Compile Include="DataBase\Entities\Position.cs" />

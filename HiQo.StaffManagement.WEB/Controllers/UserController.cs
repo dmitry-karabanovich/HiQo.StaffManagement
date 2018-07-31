@@ -1,8 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using AutoMapper;
 using HiQo.StaffManagement.Domain.EntitiesDto;
 using HiQo.StaffManagement.Domain.Services.Interface;
-using AutoMapper;
 using HiQo.StaffManagement.Core.Models;
 
 namespace HiQo.StaffManagement.WEB.Controllers

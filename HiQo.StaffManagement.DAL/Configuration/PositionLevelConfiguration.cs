@@ -3,7 +3,7 @@ using HiQo.StaffManagement.DAL.DataBase.Entities;
 
 namespace HiQo.StaffManagement.DAL.Configuration
 {
-    class PositionLevelConfiguration : EntityTypeConfiguration<PositionLevel>
+    public class PositionLevelConfiguration : EntityTypeConfiguration<PositionLevel>
     {
         public PositionLevelConfiguration()
         {

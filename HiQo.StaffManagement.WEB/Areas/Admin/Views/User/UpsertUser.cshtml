@@ -32,8 +32,6 @@
                             <p>@Html.EditorFor(user => user.LastName, new { htmlAttributes = new { @class = "form-control" } })</p>
                             @Html.LabelFor(user => user.DateOfBirth, "Date of birth")
                             <p>@Html.EditorFor(user => user.DateOfBirth, new { htmlAttributes = new { @class = "form-control", @type = "date" } })</p>
-                            @*@Html.EditorFor(model => model.DateBirth,
-                                new { htmlAttributes = new {@value = Model.DateBirth.ToString("MM/dd/yyyy"),@class = "form-control" }, })*@
                             <p>@Html.LabelFor(user => user.DepartmentId, "Department:")</p>
                             <p>@Html.DropDownListFor(user => user.DepartmentId, ViewBag.Departments as SelectList, new { @class = "form-control" })</p>
                             <p>@Html.LabelFor(user => user.CategoryId, "Category:")</p>

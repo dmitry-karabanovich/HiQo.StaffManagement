@@ -3,7 +3,7 @@ using HiQo.StaffManagement.DAL.DataBase.Entities;
 
 namespace HiQo.StaffManagement.DAL.Configuration
 {
-    class CategoryConfiguration : EntityTypeConfiguration<Category>
+    public class CategoryConfiguration : EntityTypeConfiguration<Category>
     {
         public CategoryConfiguration()
         {

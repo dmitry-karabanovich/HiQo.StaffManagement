@@ -1,8 +1,6 @@
-﻿using System;
-using System.Web.WebPages;
+﻿using System.Web.WebPages;
 using AutoMapper;
 using HiQo.StaffManagement.Core.Models;
-using HiQo.StaffManagement.DAL.DataBase.Entities;
 using HiQo.StaffManagement.Domain.EntitiesDto;
 
 namespace HiQo.StaffManagement.Configuration.AutoMapper.Profilers
