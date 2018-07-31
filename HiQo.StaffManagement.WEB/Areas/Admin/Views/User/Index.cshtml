@@ -1,0 +1,42 @@
+﻿@model IEnumerable<HiQo.StaffManagement.Domain.EntitiesDto.UserDto>
+@{
+    ViewBag.Title = "Index";
+}
+<html>
+<head>
+    <title>@ViewBag.Title </title>
+</head>
+<body>
+<h2>User</h2>
+<table class="table">
+    <thead class="alert-danger">
+    <tr>
+        <td>First Name</td>
+        <td>Second Name</td>
+        <td>Position</td>
+        <td>Position level</td>
+        <td></td>
+    </tr>
+    </thead>
+    <tbody class="tab-content">
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.FirstName</td>
+            <td>@user.LastName</td>
+            <td>@user.Position.Name</td>
+            <td>@user.PositionLevel.Name</td>
+            <td>
+                @using (Html.BeginForm("UpdateUser", "User", new { area = "Admin", userId = user.UserDtoId }))
+                {
+                    <button type="submit" class="btn btn-default">Update Profile</button>
+                }
+
+            </td>
+        </tr>
+    }
+    </tbody>
+
+</table>
+</body>
+</html>

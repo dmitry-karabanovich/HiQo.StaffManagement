@@ -15,5 +15,7 @@ namespace HiQo.StaffManagement.Domain.Services.Interface
         IEnumerable<UserDto> GetByCategory(string category);
         IEnumerable<UserDto> GetByPosition(string position);
         IEnumerable<UserDto> GetByBirthDate(DateTime bithDate);
+        void Update(UserDto user);
+        void Create(UserDto user);
     }
 }

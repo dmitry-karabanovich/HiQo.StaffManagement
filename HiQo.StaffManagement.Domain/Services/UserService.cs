@@ -59,5 +59,15 @@ namespace HiQo.StaffManagement.Domain.Services
         {
             throw new NotImplementedException();
         }
+
+        public void Update(UserDto user)
+        {
+            _userRepository.Update(user);
+        }
+
+        public void Create(UserDto user)
+        {
+            _userRepository.Add(user);
+        }
     }
 }

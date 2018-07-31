@@ -48,9 +48,10 @@ namespace HiQo.StaffManagement.WEB.Controllers
         }
 
         [HttpPost]
-        public ActionResult EditUser(UserDto user)
+        public ActionResult EditUser(UpsertUser upsertUser)
         {
-
+            var user = Mapper.Map<UserDto>(upsertUser);
+            _service.Update(user);
             return View();
         }
     }

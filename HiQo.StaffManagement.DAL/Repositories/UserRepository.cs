@@ -56,6 +56,7 @@ namespace HiQo.StaffManagement.DAL.Repositories
 
         public IEnumerable<TDto> GetAll<TDto>() where TDto : class
         {
+            var ua = _dbSet.ToList();
             var users = (_dbSet.Include(_ => _.Category).Include(_ => _.Department).Include(_ => _.Position).Include(_ => _.PositionLevel).Include(_ => _.Role).ToList()) as IEnumerable<User>;
             return Mapper.Map<IEnumerable<User>, IEnumerable<TDto>>(users);
         }
