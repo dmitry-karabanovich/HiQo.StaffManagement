@@ -40,8 +40,16 @@
                             <p>@Html.DropDownListFor(user => user.PositionId, ViewBag.Position as SelectList, new { @class = "form-control" })</p>
                             <p>@Html.LabelFor(user => user.PositionLevelId, "Position level:")</p>
                             <p>@Html.DropDownListFor(user => user.PositionLevelId, ViewBag.PositionLevel as SelectList, new { @class = "form-control" })</p>
-                            @Html.HiddenFor(user => user.RoleId);
-                            <p></p>
+                            if (Model == null)
+                            {
+                                <p>@Html.LabelFor(user => user.RoleId, "Role:")</p>
+                                <p>@Html.DropDownListFor(user => user.RoleId, ViewBag.Role as SelectList, new { @class = "form-control" })</p>
+                            }
+                            else
+                            {
+                                @Html.HiddenFor(user => user.RoleId);                                
+                            }
+                            <br/>
                             <input type="submit" value="Save changes" , class="btn btn-default" />
                         }
                     </div>

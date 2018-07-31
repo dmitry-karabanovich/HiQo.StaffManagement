@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using HiQo.StaffManagement.Domain.EntitiesDto;
 using HiQo.StaffManagement.Domain.Repositories;
 using HiQo.StaffManagement.Domain.Services.Interface;
@@ -11,7 +12,7 @@ namespace HiQo.StaffManagement.Domain.Services
 
         public PositionService(IPositionRepository repository)
         {
-            _repository = repository;
+            _repository = repository ?? throw new ArgumentNullException();
         }
 
         public IEnumerable<PositionDto> GetAll()

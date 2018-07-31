@@ -28,9 +28,9 @@
         </p>
     </div>
     <div class="panel-footer">
-        @using (Html.BeginForm("UpdateUser", "User", new {userId = Model.UserDtoId})) 
+        @using (Html.BeginForm("Index", "User", new {area = ""})) 
         { 
-            <button type="submit" class="btn btn-default">Update Profile</button> 
+            <button type="submit" class="btn btn-default">Get Back</button> 
         }
     </div>
 </div>

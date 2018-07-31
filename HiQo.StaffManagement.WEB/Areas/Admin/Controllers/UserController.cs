@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using AutoMapper;
 using HiQo.StaffManagement.Core.Models;
 using HiQo.StaffManagement.Domain.EntitiesDto;
@@ -13,8 +14,8 @@ namespace HiQo.StaffManagement.WEB.Areas.Admin.Controllers
 
         public UserController(IUserService service, IUpsertUserService upsertUserService)
         {
-            _service = service;
-            _upsertUserService = upsertUserService;
+            _service = service ?? throw new ArgumentNullException();
+            _upsertUserService = upsertUserService ?? throw new ArgumentNullException();
         }
 
         public ActionResult Index()
@@ -29,10 +30,12 @@ namespace HiQo.StaffManagement.WEB.Areas.Admin.Controllers
             var categoryList = new SelectList(info.CategoryDtos, "CategoryDtoId", "Name");
             var positionList = new SelectList(info.PositionDtos, "PositionDtoId", "Name");
             var positionLevelList = new SelectList(info.PositionLevelDtos, "PositionLevelDtoId", "Name");
+            var roleList = new SelectList(info.RoleDtos,"RoleDtoId","Name");
             ViewBag.Departments = departmentList;
             ViewBag.Category = categoryList;
             ViewBag.Position = positionList;
             ViewBag.PositionLevel = positionLevelList;
+            ViewBag.Role = roleList;
             var user = Mapper.Map<UserDto, UpsertUser>(_service.GetById(userId));
             return View("UpsertUser", user);
         }
@@ -44,10 +47,12 @@ namespace HiQo.StaffManagement.WEB.Areas.Admin.Controllers
             var categoryList = new SelectList(info.CategoryDtos, "CategoryDtoId", "Name");
             var positionList = new SelectList(info.PositionDtos, "PositionDtoId", "Name");
             var positionLevelList = new SelectList(info.PositionLevelDtos, "PositionLevelDtoId", "Name");
+            var roleList = new SelectList(info.RoleDtos, "RoleDtoId", "Name");
             ViewBag.Departments = departmentList;
             ViewBag.Category = categoryList;
             ViewBag.Position = positionList;
             ViewBag.PositionLevel = positionLevelList;
+            ViewBag.Role = roleList;
             return View("UpsertUser", null);
         }
 

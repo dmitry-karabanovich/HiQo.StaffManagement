@@ -12,7 +12,7 @@ namespace HiQo.StaffManagement.Domain.Services
 
         public UserService(IUserRepository userRepository)
         {
-            _userRepository = userRepository;
+            _userRepository = userRepository ?? throw new ArgumentNullException();
         }
 
         public IEnumerable<UserDto> GetAll()

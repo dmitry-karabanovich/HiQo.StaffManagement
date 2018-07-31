@@ -12,7 +12,7 @@ namespace HiQo.StaffManagement.Domain.Services
 
         public PositionLevelService(IPositionLevelRepository positionLevelRepository)
         {
-            _positionLevelRepository = positionLevelRepository;
+            _positionLevelRepository = positionLevelRepository ?? throw new ArgumentNullException();
         }
 
         public IEnumerable<PositionLevelDto> GetAll()

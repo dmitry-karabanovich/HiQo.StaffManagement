@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using HiQo.StaffManagement.Domain.Services.Interface;
 
 
@@ -10,7 +11,7 @@ namespace HiQo.StaffManagement.WEB.Controllers
 
         public PositionLevelController(IPositionLevelService service)
         {
-            _service = service;
+            _service = service ?? throw new ArgumentNullException();
         }
 
         public ActionResult Index()

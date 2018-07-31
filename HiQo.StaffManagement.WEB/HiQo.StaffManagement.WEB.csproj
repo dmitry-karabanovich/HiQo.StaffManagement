@@ -322,8 +322,6 @@
     <Content Include="Views\Position\Index.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\User\UserProfile.cshtml" />
-    <Content Include="Views\User\UpdateUser.cshtml" />
-    <Content Include="Views\User\EditUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

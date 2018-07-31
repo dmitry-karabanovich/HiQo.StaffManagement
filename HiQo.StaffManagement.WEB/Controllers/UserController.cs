@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 using AutoMapper;
 using HiQo.StaffManagement.Domain.EntitiesDto;
 using HiQo.StaffManagement.Domain.Services.Interface;
@@ -13,8 +14,8 @@ namespace HiQo.StaffManagement.WEB.Controllers
 
         public UserController(IUserService service, IUpsertUserService upsertUserService)
         {
-            _service = service;
-            _upsertUserService = upsertUserService;
+            _service = service ?? throw new ArgumentNullException();
+            _upsertUserService = upsertUserService ?? throw new ArgumentNullException();
         }
 
         public ActionResult Index()
@@ -25,33 +26,6 @@ namespace HiQo.StaffManagement.WEB.Controllers
         public ActionResult GetUserProfile(int userId)
         {
             return View("UserProfile",_service.GetById(userId));
-        }
-
-        public ActionResult UpdateUser(int userId)
-        {
-            var info = _upsertUserService.GetSharedInfoDto();
-            var departmentList = new SelectList(info.DepartmentDtos,"DepartmentDtoId","Name");
-            var categoryList = new SelectList(info.CategoryDtos,"CategoryDtoId","Name");
-            var positionList = new SelectList(info.PositionDtos,"PositionDtoId","Name");
-            var positionLevelList = new SelectList(info.PositionLevelDtos,"PositionLevelDtoId","Name");
-            ViewBag.Departments = departmentList;
-            ViewBag.Category = categoryList;
-            ViewBag.Position = positionList;
-            ViewBag.PositionLevel = positionLevelList;
-            return View("UpdateUser", Mapper.Map<UserDto,UpsertUser>(_service.GetById(userId)));
-        }
-
-        public ViewResult Create()
-        {
-            return View("UpdateUser", null);
-        }
-
-        [HttpPost]
-        public ActionResult EditUser(UpsertUser upsertUser)
-        {
-            var user = Mapper.Map<UserDto>(upsertUser);
-            _service.Update(user);
-            return View();
         }
     }
 }

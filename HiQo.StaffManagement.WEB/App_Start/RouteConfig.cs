@@ -1,11 +1,12 @@
-﻿using System.Web.Mvc;
+﻿using System.Reflection;
+using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace HiQo.StaffManagement.WEB
 {
     public class RouteConfig
     {
-        public static void RegisterRoutes(RouteCollection routes)
+        public static void RegisterRoutes(RouteCollection routes, Assembly assembly)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
@@ -13,7 +14,7 @@ namespace HiQo.StaffManagement.WEB
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "User", action = "Index", id = UrlParameter.Optional }, 
-                namespaces: new []{"HiQo.StaffManagement.WEB.Controllers"}
+                namespaces: new []{assembly.GetName().Name + ".Controllers"}
             );
         }
     }

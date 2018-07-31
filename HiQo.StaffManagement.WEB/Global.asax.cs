@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Reflection;
+using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using HiQo.StaffManagement.Configuration.AutoMapper;
@@ -12,7 +13,7 @@ namespace HiQo.StaffManagement.WEB
         {
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            RouteConfig.RegisterRoutes(RouteTable.Routes,Assembly.GetExecutingAssembly());
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AutoMappingConfig.ConfigureAutoMapping();
             IocContainer.SetUp();

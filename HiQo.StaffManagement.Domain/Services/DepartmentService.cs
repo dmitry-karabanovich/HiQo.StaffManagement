@@ -12,7 +12,7 @@ namespace HiQo.StaffManagement.Domain.Services
 
         public DepartmentService(IDepartmentRepository departmentRepository)
         {
-            _departmentRepository = departmentRepository;
+            _departmentRepository = departmentRepository ?? throw new ArgumentNullException();
         }
 
         public IEnumerable<DepartmentDto> GetAll()
