@@ -22,7 +22,12 @@ namespace HiQo.StaffManagement.DAL.Repositories
             throw new System.NotImplementedException();
         }
 
-        public void Remove<TDto>(TDto entity) where TDto : class
+        public void Remove(int id)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public virtual void Remove<TDto>(TDto entity) where TDto : class
         {
             throw new System.NotImplementedException();
         }

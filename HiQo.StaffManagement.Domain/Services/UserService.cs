@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using HiQo.StaffManagement.Domain.EntitiesDto;
 using HiQo.StaffManagement.Domain.Repositories;
 using HiQo.StaffManagement.Domain.Services.Interface;
@@ -68,6 +69,11 @@ namespace HiQo.StaffManagement.Domain.Services
         public void Create(UserDto user)
         {
             _userRepository.Add(user);
+        }
+
+        public void Remove(int userId)
+        {
+            _userRepository.Remove(userId);
         }
     }
 }

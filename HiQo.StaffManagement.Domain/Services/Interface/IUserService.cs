@@ -17,5 +17,6 @@ namespace HiQo.StaffManagement.Domain.Services.Interface
         IEnumerable<UserDto> GetByBirthDate(DateTime bithDate);
         void Update(UserDto user);
         void Create(UserDto user);
+        void Remove(int userId);
     }
 }

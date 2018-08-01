@@ -39,25 +39,26 @@ namespace HiQo.StaffManagement.DAL.Repositories
             DbContext.SaveChanges();
         }
 
-        public virtual void Remove(int id)
+        public void Remove(int id)
         {
             var entityToDelete = _dbSet.Find(id);
             Remove(entityToDelete);
         }
 
-        public void Remove<TDto>(TDto entityToDelete) where TDto : class
+        public virtual void Remove<TDto>(TDto entityToDelete) where TDto : class
         {
-            throw new NotImplementedException();
-            //if (_dbContext.Entry(entityToDelete).State == EntityState.Detached)
-            //    (_dbSet).Attach(entityToDelete);
+            var uswerToDelete = Mapper.Map<User>(entityToDelete);
+            if (DbContext.Entry(entityToDelete).State == EntityState.Detached)
+                (_dbSet).Attach(uswerToDelete);
 
-            //(_dbSet as DbSet<TEntity>).Remove(entityToDelete);
+            _dbSet.Remove(uswerToDelete);
         }
 
         public IEnumerable<TDto> GetAll<TDto>() where TDto : class
         {
             var ua = _dbSet.ToList();
             var users = (_dbSet.Include(_ => _.Category).Include(_ => _.Department).Include(_ => _.Position).Include(_ => _.PositionLevel).Include(_ => _.Role).ToList()) as IEnumerable<User>;
+            users.First().UserId = 100;
             return Mapper.Map<IEnumerable<User>, IEnumerable<TDto>>(users);
         }
 

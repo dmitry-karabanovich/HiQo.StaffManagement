@@ -15,11 +15,11 @@ namespace HiQo.StaffManagement.Domain.Services
 
         public UpsertUserService(IDepartmentRepository departmentRepository, ICategoryRepository categoryRepository, IPositionRepository positionRepository, IPositionLevelRepository positionLevelRepository, IRoleRepository roleRepository)
         {
-            this._departmentRepository = departmentRepository ?? throw new ArgumentNullException();
-            this._categoryRepository = categoryRepository ?? throw new ArgumentNullException();
-            this._positionRepository = positionRepository ?? throw new ArgumentNullException();
-            this._positionLevelRepository = positionLevelRepository ?? throw new ArgumentNullException();
-            this._roleRepository = roleRepository ?? throw new ArgumentNullException();
+            _departmentRepository = departmentRepository ?? throw new ArgumentNullException();
+            _categoryRepository = categoryRepository ?? throw new ArgumentNullException();
+            _positionRepository = positionRepository ?? throw new ArgumentNullException();
+            _positionLevelRepository = positionLevelRepository ?? throw new ArgumentNullException();
+            _roleRepository = roleRepository ?? throw new ArgumentNullException();
         }
 
         public SharedInfoDto GetSharedInfoDto()
