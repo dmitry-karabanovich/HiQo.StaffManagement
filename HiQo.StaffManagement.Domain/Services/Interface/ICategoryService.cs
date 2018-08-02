@@ -6,7 +6,7 @@ namespace HiQo.StaffManagement.Domain.Services.Interface
     public interface ICategoryService
     {
         IEnumerable<CategoryDto> GetAll();
-        IEnumerable<CategoryDto> GetById(int id);
+        CategoryDto GetById(int id);
         IEnumerable<CategoryDto> GetBeName(string name);
         IEnumerable<PositionDto> GetPositions(string name);
         IEnumerable<UserDto> GetUsers(string name);

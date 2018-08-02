@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using HiQo.StaffManagement.WEB.Error_Handler;
 
 namespace HiQo.StaffManagement.WEB
 {
@@ -6,7 +7,7 @@ namespace HiQo.StaffManagement.WEB
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+            filters.Add(new HandleAllErrorAttribute());
         }
     }
 }

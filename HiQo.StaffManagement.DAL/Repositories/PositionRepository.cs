@@ -30,7 +30,7 @@ namespace HiQo.StaffManagement.DAL.Repositories
 
         public TDto GetById<TDto>(int id) where TDto : class
         {
-            throw new System.NotImplementedException();
+            return Mapper.Map<Position, TDto>(_dbSet.Include(_ => _.Category).FirstOrDefault(_ => _.PositionId == id));
         }
 
         public void Add<TDto>(TDto entity) where TDto : class

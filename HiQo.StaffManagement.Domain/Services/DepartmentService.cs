@@ -20,9 +20,19 @@ namespace HiQo.StaffManagement.Domain.Services
            return _departmentRepository.GetAll<DepartmentDto>();
         }
 
-        public IEnumerable<DepartmentDto> GetById(int id)
+        public DepartmentDto GetById(int id)
         {
-            throw new NotImplementedException();
+            return _departmentRepository.GetById<DepartmentDto>(id);
+        }
+
+        public void Create(DepartmentDto department)
+        {
+           _departmentRepository.Add(department);
+        }
+
+        public void Update(DepartmentDto department)
+        {
+            _departmentRepository.Update(department);
         }
 
         public IEnumerable<DepartmentDto> GetByName(string name)

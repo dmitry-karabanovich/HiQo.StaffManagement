@@ -13,7 +13,7 @@ namespace HiQo.StaffManagement.WEB.Areas.Admin
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
                 new {action = "Index", id = UrlParameter.Optional },
-                namespaces: new []{Assembly.GetExecutingAssembly().GetName().Name + "Areas.Admin.Controllers" }
+                namespaces: new []{Assembly.GetExecutingAssembly().GetName().Name + ".Areas.Admin.Controllers" }
             );
         }
     }

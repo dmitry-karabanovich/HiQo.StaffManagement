@@ -29,7 +29,8 @@ namespace HiQo.StaffManagement.DAL.Repositories
 
         public TDto GetById<TDto>(int id) where TDto : class
         {
-            throw new System.NotImplementedException();
+            return Mapper.Map<Category, TDto>(_dbSet.Include(_ => _.Department)
+                .FirstOrDefault(_ => _.CategoryId == id));
         }
 
         public void Add<TDto>(TDto entity) where TDto : class

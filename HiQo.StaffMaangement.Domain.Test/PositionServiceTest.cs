@@ -21,6 +21,18 @@ namespace HiQo.StaffMaangement.Domain.Test
         }
 
         [Fact]
+        public void GetById()
+        {
+            const int positionId = 1;
+            var position = new PositionDto() { PositionDtoId = positionId };
+            A.CallTo(() => _position.GetById<PositionDto>(positionId)).Returns(position);
+
+            var returnsUser = _positionService.GetById(positionId);
+
+            Assert.Equal(positionId, returnsUser.PositionDtoId);
+        }
+
+        [Fact]
         public void GetAll()
         {
             IEnumerable<PositionDto> positions = new PositionDto[] { new PositionDto() { PositionDtoId = 1 }, new PositionDto() { PositionDtoId = 2 } };

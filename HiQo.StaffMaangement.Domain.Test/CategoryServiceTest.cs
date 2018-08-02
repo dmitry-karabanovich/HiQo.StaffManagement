@@ -21,6 +21,18 @@ namespace HiQo.StaffMaangement.Domain.Test
         }
 
         [Fact]
+        public void GetById()
+        {
+            const int categoryId = 1;
+            var category = new CategoryDto() { CategoryDtoId = categoryId };
+            A.CallTo(() => _category.GetById<CategoryDto>(categoryId)).Returns(category);
+
+            var returnsUser = _categoryService.GetById(categoryId);
+
+            Assert.Equal(categoryId, returnsUser.CategoryDtoId);
+        }
+
+        [Fact]
         public void GetAll()
         {
             IEnumerable<CategoryDto> categories = new CategoryDto[] { new CategoryDto() { CategoryDtoId = 1 }, new CategoryDto() { CategoryDtoId = 2 } };

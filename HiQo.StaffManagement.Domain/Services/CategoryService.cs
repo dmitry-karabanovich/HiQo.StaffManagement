@@ -20,9 +20,9 @@ namespace HiQo.StaffManagement.Domain.Services
             return _repository.GetAll<CategoryDto>();
         }
 
-        public IEnumerable<CategoryDto> GetById(int id)
+        public CategoryDto GetById(int id)
         {
-            throw new System.NotImplementedException();
+            return _repository.GetById<CategoryDto>(id);
         }
 
         public IEnumerable<CategoryDto> GetBeName(string name)

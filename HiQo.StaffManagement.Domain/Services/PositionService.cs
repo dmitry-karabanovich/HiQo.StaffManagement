@@ -20,12 +20,12 @@ namespace HiQo.StaffManagement.Domain.Services
             return _repository.GetAll<PositionDto>();
         }
 
-        public IEnumerable<PositionDto> GetById(int id)
+        public PositionDto GetById(int id)
         {
-            throw new System.NotImplementedException();
+            return _repository.GetById<PositionDto>(id);
         }
 
-        public IEnumerable<PositionDto> GetByName(string name)
+        public PositionDto GetByName(string name)
         {
             throw new System.NotImplementedException();
         }

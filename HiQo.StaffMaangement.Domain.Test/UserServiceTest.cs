@@ -20,7 +20,7 @@ namespace HiQo.StaffMaangement.Domain.Test
         }
 
         [Fact]
-        public void GetById()
+        public void GetById_user_returnsUser()
         {
             const int userId = 1;
             var user = new UserDto(){UserDtoId = userId};
@@ -32,14 +32,13 @@ namespace HiQo.StaffMaangement.Domain.Test
         }
 
         [Fact]
-        public void GetAll()
+        public void GetAll_ReturnsUserList()
         {
             IEnumerable<UserDto> users = new[] {new UserDto(){UserDtoId = 1}, new UserDto(){UserDtoId = 2}};
             var expectedIds = new[] { 1, 2};
             A.CallTo(() => _userRepository.GetAll<UserDto>()).Returns(users);
             
             var testUsers = _userService.GetAll().ToList();
-
             Assert.Equal(expectedIds.Length,testUsers.Count); 
             for (var i = 0; i < expectedIds.Length; i++)
             {

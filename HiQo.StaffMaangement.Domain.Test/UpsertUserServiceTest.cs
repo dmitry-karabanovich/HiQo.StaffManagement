@@ -11,6 +11,13 @@ namespace HiQo.StaffMaangement.Domain.Test
 {
     public class UpsertUserServiceTest
     {
+        private readonly IDepartmentRepository _department;
+        private readonly ICategoryRepository _category;
+        private readonly IPositionRepository _position;
+        private readonly IPositionLevelRepository _positionLevel;
+        private readonly IRoleRepository _role;
+        private readonly IUpsertUserService _upsertUserService;
+
         public UpsertUserServiceTest()
         {
             _department = A.Fake<IDepartmentRepository>();
@@ -20,13 +27,6 @@ namespace HiQo.StaffMaangement.Domain.Test
             _role = A.Fake<IRoleRepository>();
             _upsertUserService = new UpsertUserService(_department, _category, _position, _positionLevel, _role);
         }
-
-        private readonly IDepartmentRepository _department;
-        private readonly ICategoryRepository _category;
-        private readonly IPositionRepository _position;
-        private readonly IPositionLevelRepository _positionLevel;
-        private readonly IRoleRepository _role;
-        private readonly IUpsertUserService _upsertUserService;
 
         [Fact]
         public void GetSharedInfoDto()

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using AutoMapper;
@@ -30,12 +31,23 @@ namespace HiQo.StaffManagement.DAL.Repositories
 
         public TDto GetById<TDto>(int id) where TDto : class
         {
-            throw new System.NotImplementedException();
+            return Mapper.Map<Department, TDto>(_dbSet.FirstOrDefault(_ => _.DepartmentId == id));
         }
 
-        public void Add<TDto>(TDto entity) where TDto : class
+        public void Add<TDto>(TDto entityDto) where TDto : class
         {
-            throw new System.NotImplementedException();
+            var entity = Mapper.Map<TDto, Department>(entityDto);
+            _dbSet.Add(entity);
+            DbContext.SaveChanges();
+        }
+
+
+        public void Update<TDto>(TDto entityDto) where TDto : class
+        {
+            var entity = Mapper.Map<TDto, Department>(entityDto);
+            _dbSet.Attach(entity);
+            DbContext.Entry(entity).State = EntityState.Modified;
+            DbContext.SaveChanges();
         }
 
         public void Remove(int id)
@@ -44,11 +56,6 @@ namespace HiQo.StaffManagement.DAL.Repositories
         }
 
         public void Remove<TDto>(TDto entity) where TDto : class
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Update<TDto>(TDto entity) where TDto : class
         {
             throw new System.NotImplementedException();
         }
